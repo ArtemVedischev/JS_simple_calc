@@ -17,7 +17,6 @@
 	font-size: 2em;
 	margin-bottom: 0.3125em;
 	text-align: right;
-        font-style: italic;
 	color: #000;
 }
 .number__wrap button, .operation__wrap button, .spec_buttons button {
