@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js learning</title>
+<script src="js.js"></script> 
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="box">
+		<input type="text" required id="number" placeholder="Введите число">
+		<div class="number__wrap">
+			<button onclick="getNumber(1)">1</button>
+			<button onclick="getNumber(2)">2</button>
+			<button onclick="getNumber(3)">3</button>
+			<button onclick="getNumber(4)">4</button>
+			<button onclick="getNumber(5)">5</button>
+			<button onclick="getNumber(6)">6</button>
+			<button onclick="getNumber(7)">7</button>
+			<button onclick="getNumber(8)">8</button>
+			<button onclick="getNumber(9)">9</button>
+			<button onclick="getNumber(0)">0</button>
+			<button onclick="getNumber('point')">.</button>
+			<button onclick="showResult()">=</button>
+			<div id="getResult"></div>
+		</div>	
+		<div class="operation__wrap">
+			<button onclick="reset()" class="red_style">C</button>
+			<button onclick="getOperation(1)">+</button>
+			<button onclick="getOperation(2)">-</button>
+			<button onclick="getOperation(3)">*</button>
+			<button onclick="getOperation(4)">/</button>
+		</div>
+	</div>
+</body>
+</html>
