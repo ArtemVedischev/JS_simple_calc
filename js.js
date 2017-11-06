@@ -1,24 +1,20 @@
-window.onload = function(){
- 
-}
 var mathOperation;
 var number = '';
 var number1;
 var number2;
-var result=0;
+var result = 0;
+//clean input
 function clear() {
-	var inputNumber = document.getElementById("number");
-	inputNumber.value = "";
+	document.getElementById('number').value = '';
 }
+//clean all
 function reset(){
 	clear();
 	number =  number1 = number2 = mathOperation = '';
-	return number, number1, number2, mathOperation;
-	
 }
 //get number
 function getNumber(num) {
-	number=document.getElementById("number").value;
+	number = document.getElementById('number').value;
 	switch (num) 
 	{
 		case 1: {
@@ -67,44 +63,37 @@ function getNumber(num) {
 			break;
 		}	
 	}
-	document.getElementById("number").value = number;
-	return number;
+	document.getElementById('number').value = number;
+//	return number;
 }
 //choice of operation
 function getOperation(oper) {
-	switch (oper)
-  {
+	switch (oper)   {
 	case 1: {  //button +
       mathOperation = '+';
-	  number1 = parseFloat(document.getElementById("number").value);
-	  clear();
       break;
     }
     case 2: {  //button -
-      mathOperation = '-';
-	  number1 = parseFloat(document.getElementById("number").value);
-	  clear();
-      break;
+    	mathOperation = '-';
+    break;
     }
     case 3: {  //button *
       mathOperation = '*';
-	  number1 = parseFloat(document.getElementById("number").value);
-	  clear();
-      break;
+	  break;
     }
     case 4: {  //button /
       mathOperation = '/';
-	  number1 = parseFloat(document.getElementById("number").value);
-	  clear();
-      break;
+	  break;
     }
   }
-  number = '';
-  return mathOperation, number1, number;
+  number1 = parseFloat(document.getElementById('number').value);
+  clear();
+//  return mathOperation, number1, number;
 }
 //get result
 function showResult() {
 	number2 = parseFloat(document.getElementById("number").value);
+if (number1 && number2)	{
 	switch(mathOperation) {
 		case '+': {
 			result = number1 + number2;
@@ -131,5 +120,7 @@ function showResult() {
 	document.getElementById("number").value = res;	//return result
 	document.getElementById("getResult").innerHTML = printResult;//return result
 	console.log(number1+mathOperation+number2+'='+result);	
-
+} else {
+	alert('Enter the number');
+}
 }

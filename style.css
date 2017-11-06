@@ -17,6 +17,7 @@
 	font-size: 2em;
 	margin-bottom: 0.3125em;
 	text-align: right;
+    font-style: italic;
 	color: #000;
 }
 .number__wrap button, .operation__wrap button, .spec_buttons button {
@@ -35,13 +36,20 @@
 	float: right;
 }
 .operation__wrap .red_style {
-	color: #fefefe;
 	background-color: #f00;
 }
+.number__wrap .green_style {
+	background-color: #0f0;
+}
+.operation__wrap .red_style, .number__wrap .green_style {
+	font-weight: bold;
+	color: #fefefe;
+}
 #getResult {
-	width: 80%;
+	width: 10	0%;
 	height: 50px;
 	margin: 0.3125em;
 	padding: 0.3125em;
 	word-wrap: break-word;
+	border: solid 1px;
 }

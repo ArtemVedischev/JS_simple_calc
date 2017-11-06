@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="box">
-		<input type="text" required id="number" placeholder="Введите число">
+		<input type="text" required id="number" placeholder="Введите число" autofocus>
 		<div class="number__wrap">
 			<button onclick="getNumber(1)">1</button>
 			<button onclick="getNumber(2)">2</button>
@@ -20,7 +20,7 @@
 			<button onclick="getNumber(9)">9</button>
 			<button onclick="getNumber(0)">0</button>
 			<button onclick="getNumber('point')">.</button>
-			<button onclick="showResult()">=</button>
+			<button class="green_style" onclick="showResult()">=</button>
 			<div id="getResult"></div>
 		</div>	
 		<div class="operation__wrap">
